@@ -1,10 +1,9 @@
 pipeline{
-  agent any{
-  
-            stage('Build'){
-              echo "Building nothing!!!!"
-        }
-      }
-    }
+  agent {docker 'maven:3.3.3' }
+  stage('Build'){
+              echo "Building nothing!!!!
+  }
+ }
+    
     
     
