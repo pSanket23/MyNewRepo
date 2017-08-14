@@ -1,5 +1,9 @@
 node('master'){
-  stage('Build'){
+  stage('Stage1'){
+              echo "Building nothing!!!!"
+  }
+  
+  stage('Stage2'){
               echo "Building nothing!!!!"
   }
  }
