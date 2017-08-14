@@ -1,6 +1,6 @@
 node('master'){
   stage('Build'){
-              echo "Building nothing!!!!
+              echo "Building nothing!!!!"
   }
  }
     
