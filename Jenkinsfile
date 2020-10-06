@@ -1,11 +1,8 @@
 node('master'){
-  stage('Stage1'){
-              echo "Building nothing!!!!"
+  stage('Clean Work space'){
+              deleteDir()
   }
-  
-  stage('Stage2'){
-              echo "Building nothing!!!!"
-  }
+
   
   stage('Clone repo'){
               echo "cloning repo!!!!"
@@ -14,11 +11,16 @@ node('master'){
   
   stage('Copy Sanket'){
               sh 'mkdir temp'
-              sh 'cp Sanket temp/'
+              sh 'touch Sanket.txt'
+              sh 'cp Sanket.txt temp/'
   }
  }
 
 node("test"){
+  stage('Clean Work space'){
+              deleteDir()
+  }
+  
   stage('Clone repo'){
               echo "cloning repo!!!!"
               checkout scm
