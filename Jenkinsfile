@@ -17,6 +17,15 @@ node('master'){
               sh 'cp Sanket temp/'
   }
  }
+
+node("test"){
+  stage('Clone repo'){
+              echo "cloning repo!!!!"
+              checkout scm
+  }
+  
+  
+}
     
     
     
